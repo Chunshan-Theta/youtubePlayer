@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var YoutubeView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let url = NSURL (string: "https://youtu.be/H9NhYx9xIiU");
+        let requestObj = NSURLRequest(url: url! as URL);
+        YoutubeView.loadRequest(requestObj as URLRequest);
     }
 
     override func didReceiveMemoryWarning() {
